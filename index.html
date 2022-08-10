@@ -3,32 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Title</title>
+        <title>Recipes App</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="script.js" defer></script>
     </head>
     <body>
         <div class="mobile-container">
             <header>
-                <input type="text">
+                <input type="text" id="search-term" />
                 <button id="search"><i class="fas fa-search"></i></button>
             </header>
             <div class="fav-container">
                 <h3>Favorite Meals</h3>
-                <ul class="fav-meals">
-                    <li><img src="https://www.themealdb.com/images/ingredients/Lime.png" alt=""><span>Lime</span></li>
-                    <li><img src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg" alt=""><span>noodles</span></li>
-                    <li><img src="https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg" alt=""><span>sanwidch</span></li>
-                    <li><img src="https://www.themealdb.com/images/ingredients/Lime.png" alt=""><span>Lime</span></li>
-                    
-                </ul>
+                <ul class="fav-meals" id="fav-meals"></ul>
             </div>
-            <div class="meals" id="meals">
-                
-                
-                
+            <div class="meals" id="meals"></div>
+        </div>
 
+        <div class="popup-container hidden" id="meal-popup">
+            <div class="popup">
+                <button id="close-popup" class="close-popup">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="meal-info" id="meal-info"></div>
             </div>
         </div>
     </body>
